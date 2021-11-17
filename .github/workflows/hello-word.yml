@@ -43,3 +43,10 @@ jobs:
       uses: actions/checkout@v2
     - name: imprimir 'Hello Word' na tela
       run: echo Hello Windows world!
+      
+  job3:
+    runs-on: windows-latest
+    needs: [job1, job2]
+    steps:
+    - name: imprimir 'Hello Word' na tela
+      run: echo Hello Windows world!
